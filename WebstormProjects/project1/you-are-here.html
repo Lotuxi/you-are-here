@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>You are here!</title>
+
+<!--Add Bootstrap-->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="you-are-here-style.css">
+
+    <link rel="script" href="you-are-here-js.js">
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <script>
+        google.maps.event.addDomListener(window, "load", initalize);
+    </script>
+
+</head>
+
+<body>
+
+    <div id="pageheader">
+        <h1>You are here!</h1>
+    </div>
+
+    <div>
+        <p>Here is some placeholder text.</p>
+    </div>
+
+    <div>
+        <p>Here is some more placeholder text.</p>
+    </div>
+
+    <div id="map">
+
+    </div>
+
+    <div id="directionalbuttons">
+        <div class="northbutton">
+            <button type="button">Move 500 miles North.</button>
+        </div>
+
+        <div id="southbutton">
+            <button type="button">Move 500 miles South.</button>
+        </div>
+
+        <div id="eastbutton">
+            <button type="button">Move 500 miles East.</button>
+        </div>
+
+        <div id="westbutton">
+            <button type="button">Move 500 miles West.</button>
+        </div>
+
+     </div>
+
+</body>
+
+</html>
