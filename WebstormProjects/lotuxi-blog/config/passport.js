@@ -1,6 +1,5 @@
 var LocalStrategy = require('passport-local').Strategy;
-
-var User = require('../models/user');
+var User = require('../models/user.js');
 
 module.exports = function(passport) {
 
@@ -17,19 +16,15 @@ module.exports = function(passport) {
     });
 
 
-
-    }));
-
     //Signup
     passport.use('local-signup', new LocalStrategy({
         usernameField: 'username',
         passwordField: 'password',
         passReqToCallback: true
     }, function (req, username, password, done) {
-
         process.nextTick(function () {
 
-            //Search
+            //Search for user
             User.findOne({'local.username': username}, function (err, user) {
                 if (err) {
                     return done(err);    //database error
